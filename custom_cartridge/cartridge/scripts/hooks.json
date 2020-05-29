@@ -1,0 +1,8 @@
+{
+    "hooks": [
+        {
+            "name": "dw.ocapi.shop.customer.beforePatch",
+            "script": "./hooks/customerhook.js"
+        }
+    ]
+}

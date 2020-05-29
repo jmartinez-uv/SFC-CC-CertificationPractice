@@ -1,0 +1,132 @@
+
+{
+  "step-types":
+  {
+    "script-module-step":
+    [
+      {
+        "@type-id":"custom.get-retrieved-credit-card",
+        "@supports-parallel-execution":"true",
+        "@supports-site-context":"true",
+        "@supports-organization-context":"false",
+        "description":"import payment instrumnets type",
+        "module":"custom_cartridge/cartridge/controllers/PaymentXML.js",
+        "function":"retrieveCreditCard",
+        "transactional":"false",
+        "timeout-in-seconds":"900",
+        "parameters":
+        {
+          "parameter":
+          [
+            {
+              "@name":"codestring",
+              "@type":"string",
+              "@required":"true",
+              "description":"An optional string parameter, length must be between 10 and 50",
+              "min-length":"10",
+              "max-length":"50"
+            }
+          ]
+        },
+        "status-codes": 
+        {
+                  "status": 
+          [
+                      {
+                          "@code": "ERROR",
+                          "description": "Used when the step failed with an error."
+                      },
+                      {
+                          "@code": "FINISHED",
+              "description": "Used when the step finished successfully."
+                      },
+                      {
+                          "@code": "FINISHED_WITH_WARNINGS",
+              "description": "Used when the step finished with warnings."
+                      }
+                  ]
+              }
+      },
+      {
+        "@type-id":"custom.import-file",
+        "@supports-parallel-execution":"true",
+        "@supports-site-context":"true",
+        "@supports-organization-context":"false",
+        "description":"xml file to read",
+        "module":"custom_cartridge/cartridge/controllers/PaymentXML.js",
+        "function":"importFile",
+        "transactional":"false",
+        "timeout-in-seconds":"900",
+        "parameters":
+        {
+          "parameter":
+          [
+            {
+              "@name":"xmlobj",
+              "@type":"string",
+              "@required":"true"
+            }
+          ]
+        },
+        "status-codes": 
+        {
+                  "status": 
+          [
+                      {
+                          "@code": "ERROR",
+                          "description": "Used when the step failed with an error."
+                      },
+                      {
+                          "@code": "FINISHED",
+              "description": "Used when the step finished successfully."
+                      },
+                      {
+                          "@code": "FINISHED_WITH_WARNINGS",
+              "description": "Used when the step finished with warnings."
+                      }
+                  ]
+              }
+      },
+      {
+        "@type-id":"custom.read-file",
+        "@supports-parallel-execution":"true",
+        "@supports-site-context":"true",
+        "@supports-organization-context":"false",
+        "description":"parsed xml object",
+        "module":"custom_cartridge/cartridge/controllers/PaymentXML.js",
+        "function":"readFile",
+        "transactional":"false",
+        "timeout-in-seconds":"900",
+        "parameters":
+        {
+          "parameter":
+          [
+            {
+              "@name":"object",
+              "@type":"string",
+              "@required":"true"
+            }
+          ]
+        },
+        "status-codes": 
+        {
+                  "status": 
+          [
+                      {
+                          "@code": "ERROR",
+                          "description": "Used when the step failed with an error."
+                      },
+                      {
+                          "@code": "FINISHED",
+              "description": "Used when the step finished successfully."
+                      },
+                      {
+                          "@code": "FINISHED_WITH_WARNINGS",
+              "description": "Used when the step finished with warnings."
+                      }
+                  ]
+              }
+      }
+    ]
+  }
+}

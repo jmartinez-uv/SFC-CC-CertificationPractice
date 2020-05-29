@@ -1,0 +1,13 @@
+<isdecorate template="common/layout/page">
+
+    <div class="container">
+            <p>
+            
+                ${Resource.msg('main.response.exercise', 'logRender', null)}
+
+                <isprint value="${pdict.error}" encoding="htmlcontent" />
+            </p>
+    </div>
+
+
+</isdecorate>

@@ -1,0 +1,78 @@
+{
+    "name":"mixed layout",
+    "description":"Pre-defined set of regions to place your images and text to create the page design",
+    "region_definitions":[
+      {
+        "id":"banner",
+        "name":"Banner Region",
+        "max_components":1,
+        "component_type_exclusions": [
+          { "type_id": "layouts.1column" },
+          { "type_id": "layouts.2column" },
+          { "type_id": "layouts.3column" },
+          { "type_id": "layouts.4column" },
+          { "type_id": "layouts.carousel" },
+          { "type_id": "layouts.gridcomponentlayout" },
+          { "type_id": "assets.categorytile" },
+          { "type_id": "assets.producttile" },
+          { "type_id": "assets.topsellertile" }
+        ]
+      },
+      {
+        "id":"main",
+        "name":"main region",
+        "component_type_exclusions": [
+          { "type_id": "assets.categorytile" },
+          { "type_id": "assets.headlinebanner" },
+          { "type_id": "assets.producttile" },
+          { "type_id": "assets.topsellertile" },
+          { "type_id": "layouts.carousel" }
+        ]
+      },
+      {
+        "id":"tile1",
+        "name":"left tile region",
+        "max_components":1,
+        "component_type_exclusions": [
+          { "type_id": "layouts.1column" },
+          { "type_id": "layouts.2column" },
+          { "type_id": "layouts.3column" },
+          { "type_id": "layouts.4column" },
+          { "type_id": "layouts.carousel" },
+          { "type_id": "layouts.gridcomponentlayout" },
+          { "type_id": "assets.categorytile" },
+          { "type_id": "assets.headlinebanner" }
+        ]
+      },
+      {
+        "id":"tile2",
+        "name":"center tile",
+        "max_components":1,
+        "component_type_exclusions": [
+          { "type_id": "layouts.1column" },
+          { "type_id": "layouts.2column" },
+          { "type_id": "layouts.3column" },
+          { "type_id": "layouts.4column" },
+          { "type_id": "layouts.carousel" },
+          { "type_id": "layouts.gridcomponentlayout" },
+          { "type_id": "assets.categorytile" },
+          { "type_id": "assets.headlinebanner" }
+        ]
+      },
+      {
+        "id":"tile3",
+        "name":"right tile",
+        "max_components":1,
+        "component_type_exclusions": [
+          { "type_id": "layouts.1column" },
+          { "type_id": "layouts.2column" },
+          { "type_id": "layouts.3column" },
+          { "type_id": "layouts.4column" },
+          { "type_id": "layouts.carousel" },
+          { "type_id": "layouts.gridcomponentlayout" },
+          { "type_id": "assets.categorytile" },
+          { "type_id": "assets.headlinebanner" }
+        ]
+      }
+    ]
+}

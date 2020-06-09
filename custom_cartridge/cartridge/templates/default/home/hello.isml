@@ -1,1 +1,40 @@
-Hello World
+<isdecorate template="common/layout/page">
+    <isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+   assets.addCss('/css/login.css');
+    </isscript>
+
+    <div class="container mt-5">
+            <div class="row w-50 m-auto">
+			<div class="text-center">
+			<h3>${Resource.msg('main.title.hello', 'localization', null)}</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum maxime, nemo unde eum laborum! Autem assumenda animi est, deserunt et, dignissimos ducimus. Ducimus aliquid excepturi, vero explicabo perspiciatis autem blanditiis?</p>
+			</div>
+			<div class="form-group row flex-nowrap w-100">
+				<input class="form-control rounded-0" type="text">
+				<button class="btn btn-primary rounded-0">${Resource.msg('btn.search', 'localization', null)}</button>
+			</div>
+
+		</div>
+		<hr class="mb-5 mt-5">
+		<div class="row justify-content-around mb-3">
+			<div class="col-6">
+			<img class="hidden-md-down img-thumbnail" src="${URLUtils.staticURL('/images/idioma_01.png')}" alt="${Resource.msg('global.storename', 'common', null)}" />
+			</div>
+			<div class="col-6">
+				<h4>${Resource.msg('main.subtitle.chat', 'localization', null)}</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, dolor repellendus blanditiis, voluptatem quas aspernatur.</p>
+			</div>
+		</div>
+		<div class="row justify-content-around mb-3">
+			<div class="col-6">
+				<h4>${Resource.msg('main.subtitle.support', 'localization', null)}</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, dolor repellendus blanditiis, voluptatem quas aspernatur.</p>
+			</div>
+			<div class="col-6">
+			<img class="hidden-md-down img-thumbnail" src="${URLUtils.staticURL('/images/idioma_02.jpg')}" alt="${Resource.msg('global.storename', 'common', null)}" />
+			</div>
+		</div>
+    </div>
+
+</isdecorate>

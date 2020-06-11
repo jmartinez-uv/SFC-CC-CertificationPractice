@@ -1,8 +1,12 @@
 {
     "hooks": [
         {
-            "name": "dw.ocapi.shop.customer.beforePatch",
-            "script": "./hooks/customerhook.js"
-        }
+            "name": "dw.ocapi.shop.category.beforeGET",
+            "script": "./hooks/categories"
+            },
+            {
+            "name" : "dw.ocapi.shop.category.modifyGETResponse",
+            "script" : "./hooks/categories"
+            }
     ]
 }
